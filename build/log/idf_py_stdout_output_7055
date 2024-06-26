@@ -1,0 +1,69 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd "/home/isaias/esp-tflite-micro/dog detection/build/bootloader/esp-idf/esptool_py" && /home/isaias/esp/idf-tools/python_env/idf5.3_py3.10_env/bin/python /home/isaias/esp/idf/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/isaias/esp-tflite-micro/dog\ detection/build/bootloader/bootloader.bin
+Bootloader binary size 0x6df0 bytes. 0x210 bytes (2%) free.
+[2/7] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/detection_responder.cc.obj
+/home/isaias/esp-tflite-micro/dog detection/main/detection_responder.cc: In function 'void RespondToDetection(float)':
+/home/isaias/esp-tflite-micro/dog detection/main/detection_responder.cc:50:9: warning: missing initializer for member 'mcpwm_operator_config_t::intr_priority' [-Wmissing-field-initializers]
+   50 |         };
+      |         ^
+/home/isaias/esp-tflite-micro/dog detection/main/detection_responder.cc:50:9: warning: missing initializer for member 'mcpwm_operator_config_t::flags' [-Wmissing-field-initializers]
+/home/isaias/esp-tflite-micro/dog detection/main/detection_responder.cc:54:57: warning: missing initializer for member 'mcpwm_comparator_config_t::flags' [-Wmissing-field-initializers]
+   54 |         mcpwm_comparator_config_t comparator_config = {0};
+      |                                                         ^
+/home/isaias/esp-tflite-micro/dog detection/main/detection_responder.cc:61:9: warning: missing initializer for member 'mcpwm_generator_config_t::flags' [-Wmissing-field-initializers]
+   61 |         };
+      |         ^
+In file included from /home/isaias/esp/idf/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:12,
+                 from /home/isaias/esp/idf/esp-idf/components/esp_hw_support/include/esp_cpu.h:20,
+                 from /home/isaias/esp/idf/esp-idf/components/esp_hw_support/include/spinlock.h:11,
+                 from /home/isaias/esp/idf/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:49,
+                 from /home/isaias/esp/idf/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:57,
+                 from /home/isaias/esp/idf/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:69,
+                 from /home/isaias/esp-tflite-micro/dog detection/main/detection_responder.cc:3:
+/home/isaias/esp/idf/esp-idf/components/esp_driver_mcpwm/include/driver/mcpwm_gen.h:92:75: warning: missing initializer for member 'mcpwm_gen_timer_event_action_t::direction' [-Wmissing-field-initializers]
+   92 |     (mcpwm_gen_timer_event_action_t) { .event = MCPWM_TIMER_EVENT_INVALID }
+      |                                                                           ^
+/home/isaias/esp/idf/esp-idf/components/esp_common/include/esp_err.h:116:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  116 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/home/isaias/esp-tflite-micro/dog detection/main/detection_responder.cc:68:13: note: in expansion of macro 'MCPWM_GEN_TIMER_EVENT_ACTION_END'
+   68 |             MCPWM_GEN_TIMER_EVENT_ACTION_END()
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/isaias/esp/idf/esp-idf/components/esp_driver_mcpwm/include/driver/mcpwm_gen.h:92:75: warning: missing initializer for member 'mcpwm_gen_timer_event_action_t::action' [-Wmissing-field-initializers]
+   92 |     (mcpwm_gen_timer_event_action_t) { .event = MCPWM_TIMER_EVENT_INVALID }
+      |                                                                           ^
+/home/isaias/esp/idf/esp-idf/components/esp_common/include/esp_err.h:116:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  116 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/home/isaias/esp-tflite-micro/dog detection/main/detection_responder.cc:68:13: note: in expansion of macro 'MCPWM_GEN_TIMER_EVENT_ACTION_END'
+   68 |             MCPWM_GEN_TIMER_EVENT_ACTION_END()
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/isaias/esp/idf/esp-idf/components/esp_driver_mcpwm/include/driver/mcpwm_gen.h:137:61: warning: missing initializer for member 'mcpwm_gen_compare_event_action_t::direction' [-Wmissing-field-initializers]
+  137 |     (mcpwm_gen_compare_event_action_t) { .comparator = NULL }
+      |                                                             ^
+/home/isaias/esp/idf/esp-idf/components/esp_common/include/esp_err.h:116:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  116 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/home/isaias/esp-tflite-micro/dog detection/main/detection_responder.cc:73:13: note: in expansion of macro 'MCPWM_GEN_COMPARE_EVENT_ACTION_END'
+   73 |             MCPWM_GEN_COMPARE_EVENT_ACTION_END()
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/isaias/esp/idf/esp-idf/components/esp_driver_mcpwm/include/driver/mcpwm_gen.h:137:61: warning: missing initializer for member 'mcpwm_gen_compare_event_action_t::action' [-Wmissing-field-initializers]
+  137 |     (mcpwm_gen_compare_event_action_t) { .comparator = NULL }
+      |                                                             ^
+/home/isaias/esp/idf/esp-idf/components/esp_common/include/esp_err.h:116:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  116 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/home/isaias/esp-tflite-micro/dog detection/main/detection_responder.cc:73:13: note: in expansion of macro 'MCPWM_GEN_COMPARE_EVENT_ACTION_END'
+   73 |             MCPWM_GEN_COMPARE_EVENT_ACTION_END()
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[3/7] Linking C static library esp-idf/main/libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable person_detection.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.8.dev4
+Creating esp32 image...
+Merged 3 ELF sections
+Successfully created esp32 image.
+Generated /home/isaias/esp-tflite-micro/dog detection/build/person_detection.bin
+[7/7] cd "/home/isaias/esp-tflite-micro/dog detection/build/esp-idf/esptool_py" && /home/isaias/esp/idf-tools/python_env/idf5.3_py3.10_env/bin/python /home/isaias/esp/idf/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/isaias/esp-tflite-micro/dog\ detection/build/partition_table/partition-table.bin /home/isaias/esp-tflite-micro/dog\ detection/build/person_detection.bin
+person_detection.bin binary size 0x7bd90 bytes. Smallest app partition is 0x180000 bytes. 0x104270 bytes (68%) free.

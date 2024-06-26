@@ -1,0 +1,104 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d8f5c: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:31
+[0m
+[0;33m0x400d8f63: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:38
+[0m
+[0;33m0x4008615a: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:150
+0x40086165: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:160
+[0m
+[0;33m0x400d8f60: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:32
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d8f5c: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:31
+[0m
+[0;33m0x400d8f63: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:38
+[0m
+[0;33m0x4008615a: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:150
+0x40086165: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:160
+[0m
+[0;33m0x400d8f60: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:32
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d8f5c: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:31
+[0m
+[0;33m0x400d8f63: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:38
+[0m
+[0;33m0x4008615a: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:150
+0x40086165: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:160
+[0m
+[0;33m0x400d8f60: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:32
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d8f5c: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:31
+[0m
+[0;33m0x400d8f63: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:38
+[0m
+[0;33m0x4008615a: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:150
+0x40086165: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:160
+[0m
+[0;33m0x400d8f60: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:32
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d8f5c: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:31
+[0m
+[0;33m0x400d8f63: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:38
+[0m
+[0;33m0x4008615a: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:150
+0x40086165: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:160
+[0m
+[0;33m0x400d8f60: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:32
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d8f5c: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:31
+[0m
+[0;33m0x400d8f63: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:38
+[0m
+[0;33m0x4008615a: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:150
+0x40086165: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:160
+[0m
+[0;33m0x400d8f60: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:32
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d8f5c: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:31
+[0m
+[0;33m0x400d8f63: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:38
+[0m
+[0;33m0x4008615a: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:150
+0x40086165: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:160
+[0m
+[0;33m0x400d8f60: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:32
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d8f5c: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:31
+[0m
+[0;33m0x400d8f63: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:38
+[0m
+[0;33m0x4008615a: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:150
+0x40086165: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:160
+[0m
+[0;33m0x400d8f60: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:32
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d8f5c: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:31
+[0m
+[0;33m0x400d8f63: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:38
+[0m
+[0;33m0x4008615a: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:150
+0x40086165: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:160
+[0m
+[0;33m0x400d8f60: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:32
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m

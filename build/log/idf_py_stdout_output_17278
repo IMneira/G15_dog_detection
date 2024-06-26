@@ -1,0 +1,136 @@
+��ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:7516
+ho 0 tail 12 room 4
+load:0x40078000,len:16440
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:4092
+entry 0x40080630
+[0;32mI (33) boot: ESP-IDF v5.3-dev-2747-g4f3cd0deb9-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Jun 25 2024 04:21:41[0m
+[0;33mW (35) boot: Unicore bootloader[0m
+[0;32mI (39) boot: chip revision: v3.1[0m
+[0;32mI (43) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (48) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (53) boot.esp32: SPI Mode       : QIO[0m
+[0;32mI (57) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (62) boot: Enabling RNG early entropy source...[0m
+[0;32mI (67) boot: Partition Table:[0m
+[0;32mI (71) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (78) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (86) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (93) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (101) boot: End of partition table[0m
+[0;32mI (105) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a8d0h (239824) map[0m
+[0;32mI (175) esp_image: segment 1: paddr=0004a8f8 vaddr=3ffb0000 size=02988h ( 10632) load[0m
+[0;32mI (178) esp_image: segment 2: paddr=0004d288 vaddr=40080000 size=02d90h ( 11664) load[0m
+[0;32mI (184) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=2f38ch (193420) map[0m
+[0;32mI (239) esp_image: segment 4: paddr=0007f3b4 vaddr=40082d90 size=0c8e4h ( 51428) load[0m
+[0;32mI (263) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (263) boot: Disabling RNG early entropy source...[0m
+[0;32mI (274) cpu_start: Unicore app[0m
+[0;32mI (274) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (274) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (276) esp_psram: Speed: 80MHz[0m
+[0;32mI (280) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (287) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (297) cpu_start: Single core mode[0m
+[0;32mI (772) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (779) cpu_start: Pro cpu start user code[0m
+[0;32mI (779) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (779) app_init: Application information:[0m
+[0;32mI (782) app_init: Project name:     person_detection[0m
+[0;32mI (788) app_init: App version:      1[0m
+[0;32mI (792) app_init: Compile time:     Jun 25 2024 04:21:40[0m
+[0;32mI (798) app_init: ELF file SHA256:  8a1bb059e...[0m
+[0;32mI (804) app_init: ESP-IDF:          v5.3-dev-2747-g4f3cd0deb9-dirty[0m
+[0;32mI (810) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (815) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (820) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (825) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (832) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (838) heap_init: At 3FFB3638 len 0002C9C8 (178 KiB): DRAM[0m
+[0;32mI (844) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (851) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (857) heap_init: At 4008F674 len 0001098C (66 KiB): IRAM[0m
+[0;32mI (863) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (870) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (877) spi_flash: detected chip: generic[0m
+[0;32mI (882) spi_flash: flash io: qio[0m
+[0;33mW (886) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (896) main_task: Started on CPU0[0m
+[0;32mI (896) main_task: Calling app_main()[0m
+[0;32mI (906) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (906) cam_hal: cam init ok[0m
+[0;32mI (916) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (916) sccb: sccb_i2c_port=1[0m
+[0;32mI (916) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (956) camera: Detected camera at address=0x30[0m
+[0;32mI (956) camera: Detected OV2640 camera[0m
+[0;32mI (956) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (1026) esp32 ll_cam: node_size: 3072, nodes_per_line: 1, lines_per_node: 4, dma_half_buffer_min:  3072, dma_half_buffer: 12288,lines_per_half_buffer: 16, dma_buffer_size: 24576, image_size: 18432[0m
+[0;32mI (1036) cam_hal: buffer_size: 24576, half_buffer_size: 12288, node_buffer_size: 3072, node_cnt: 8, total_cnt: 1[0m
+[0;32mI (1046) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1046) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1056) cam_hal: cam config ok[0m
+[0;32mI (1056) ov2640: Set PLL: clk_2x: 0, clk_div: 3, pclk_auto: 1, pclk_div: 8[0m
+Camera Initialized
+
+Image Captured
+
+[0;32mI (3596) servo_test: Initializing MCPWM servo control[0m
+[0;32mI (3596) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3596) servo_test: Setting servo to 0 degrees[0m
+[0;32mI (3606) servo_test: Servo initialized[0m
+dog score:30%
+[0;32mI (3606) servo_test: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:30%
+[0;32mI (8896) servo_test: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:34%
+[0;32mI (14176) servo_test: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:50%
+[0;32mI (19456) servo_test: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:50%
+[0;32mI (24736) servo_test: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:50%
+[0;32mI (30016) servo_test: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:97%
+[0;32mI (35296) servo_test: Dog detected. Moving servo to 90 degrees.[0m
+[0;32mI (42296) servo_test: Moving servo to 0 degrees.[0m
+Image Captured
+
+dog score:100%
+[0;32mI (47576) servo_test: Dog detected. Moving servo to 90 degrees.[0m
+[0;32mI (54576) servo_test: Moving servo to 0 degrees.[0m
+Image Captured
+
+dog score:98%
+[0;32mI (59856) servo_test: Dog detected. Moving servo to 90 degrees.[0m
+[0;32mI (66856) servo_test: Moving servo to 0 degrees.[0m
+Image Captured
+
+dog score:50%
+[0;32mI (72136) servo_test: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:52%
+[0;32mI (77416) servo_test: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+

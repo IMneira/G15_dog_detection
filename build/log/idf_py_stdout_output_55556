@@ -1,0 +1,754 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:7516
+ho 0 tail 12 room 4
+load:0x40078000,len:16440
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:4092
+entry 0x40080630
+[0;32mI (33) boot: ESP-IDF v5.3-dev-2747-g4f3cd0deb9-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Jun 25 2024 00:03:17[0m
+[0;33mW (35) boot: Unicore bootloader[0m
+[0;32mI (39) boot: chip revision: v3.1[0m
+[0;32mI (43) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (48) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (53) boot.esp32: SPI Mode       : QIO[0m
+[0;32mI (57) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (62) boot: Enabling RNG early entropy source...[0m
+[0;32mI (67) boot: Partition Table:[0m
+[0;32mI (71) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (78) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (86) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (93) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (101) boot: End of partition table[0m
+[0;32mI (105) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a978h (239992) map[0m
+[0;32mI (175) esp_image: segment 1: paddr=0004a9a0 vaddr=3ffb0000 size=02988h ( 10632) load[0m
+[0;32mI (178) esp_image: segment 2: paddr=0004d330 vaddr=40080000 size=02ce8h ( 11496) load[0m
+[0;32mI (184) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=2f35ch (193372) map[0m
+[0;32mI (239) esp_image: segment 4: paddr=0007f384 vaddr=40082ce8 size=0c98ch ( 51596) load[0m
+[0;32mI (263) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (263) boot: Disabling RNG early entropy source...[0m
+[0;32mI (274) cpu_start: Unicore app[0m
+[0;32mI (274) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (275) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (276) esp_psram: Speed: 80MHz[0m
+[0;32mI (280) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (287) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (297) cpu_start: Single core mode[0m
+[0;32mI (772) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (779) cpu_start: Pro cpu start user code[0m
+[0;32mI (779) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (779) app_init: Application information:[0m
+[0;32mI (782) app_init: Project name:     person_detection[0m
+[0;32mI (788) app_init: App version:      1[0m
+[0;32mI (792) app_init: Compile time:     Jun 25 2024 00:03:15[0m
+[0;32mI (798) app_init: ELF file SHA256:  bf20d166d...[0m
+[0;32mI (804) app_init: ESP-IDF:          v5.3-dev-2747-g4f3cd0deb9-dirty[0m
+[0;32mI (811) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (815) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (820) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (825) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (832) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (838) heap_init: At 3FFB3638 len 0002C9C8 (178 KiB): DRAM[0m
+[0;32mI (845) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (851) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (857) heap_init: At 4008F674 len 0001098C (66 KiB): IRAM[0m
+[0;32mI (863) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (870) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (878) spi_flash: detected chip: generic[0m
+[0;32mI (882) spi_flash: flash io: qio[0m
+[0;33mW (886) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (896) main_task: Started on CPU0[0m
+[0;32mI (896) main_task: Calling app_main()[0m
+[0;32mI (896) detection_responder: Create timer and operator[0m
+[0;32mI (906) detection_responder: Connect timer and operator[0m
+[0;32mI (916) detection_responder: Create comparator and generator from the operator[0m
+[0;32mI (916) gpio: GPIO[0]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (926) detection_responder: Set generator action on timer and compare event[0m
+[0;32mI (936) detection_responder: Enable and start timer[0m
+[0;32mI (946) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (956) cam_hal: cam init ok[0m
+[0;32mI (956) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (956) sccb: sccb_i2c_port=1[0m
+[0;32mI (966) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1006) camera: Detected camera at address=0x30[0m
+[0;32mI (1006) camera: Detected OV2640 camera[0m
+[0;32mI (1006) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (1076) esp32 ll_cam: node_size: 3072, nodes_per_line: 1, lines_per_node: 4, dma_half_buffer_min:  3072, dma_half_buffer: 12288,lines_per_half_buffer: 16, dma_buffer_size: 24576, image_size: 18432[0m
+[0;32mI (1086) cam_hal: buffer_size: 24576, half_buffer_size: 12288, node_buffer_size: 3072, node_cnt: 8, total_cnt: 1[0m
+[0;32mI (1096) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1096) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1106) cam_hal: cam config ok[0m
+[0;32mI (1106) ov2640: Set PLL: clk_2x: 0, clk_div: 3, pclk_auto: 1, pclk_div: 8[0m
+Camera Initialized
+
+Image Captured
+
+dog score:35%
+[0;32mI (3646) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:35%
+[0;32mI (5936) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:37%
+[0;32mI (8226) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:65%
+[0;32mI (10516) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (12806) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (15096) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (17386) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (19676) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (21966) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (24256) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (26546) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (28836) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (31126) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (33416) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (35706) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (37996) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (40286) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:77%
+[0;32mI (42576) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:99%
+[0;32mI (44866) detection_responder: Dog detected. Moving servo to 90 degrees.[0m
+[0;32mI (51866) detection_responder: Moving servo to 0 degrees.[0m
+Image Captured
+
+dog score:99%
+[0;32mI (54156) detection_responder: Dog detected. Moving servo to 90 degrees.[0m
+[0;32mI (61156) detection_responder: Moving servo to 0 degrees.[0m
+Image Captured
+
+dog score:98%
+[0;32mI (63446) detection_responder: Dog detected. Moving servo to 90 degrees.[0m
+[0;32mI (70446) detection_responder: Moving servo to 0 degrees.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (72736) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (75026) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (77316) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (79606) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (81896) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (84186) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (86476) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:70%
+[0;32mI (88766) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (91056) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (93346) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:70%
+[0;32mI (95636) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:70%
+[0;32mI (97926) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:70%
+[0;32mI (100216) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (102506) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (104796) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (107086) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (109376) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (111666) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (113956) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:70%
+[0;32mI (116246) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:70%
+[0;32mI (118536) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:70%
+[0;32mI (120826) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (123116) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (125406) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (127696) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (129986) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (132276) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (134566) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:99%
+[0;32mI (136856) detection_responder: Dog detected. Moving servo to 90 degrees.[0m
+[0;32mI (143856) detection_responder: Moving servo to 0 degrees.[0m
+Image Captured
+
+dog score:100%
+[0;32mI (146146) detection_responder: Dog detected. Moving servo to 90 degrees.[0m
+[0;32mI (153146) detection_responder: Moving servo to 0 degrees.[0m
+Image Captured
+
+dog score:52%
+[0;32mI (155436) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (157726) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (160016) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (162306) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (164596) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (166886) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (169176) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (171466) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (173756) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (176046) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:40%
+[0;32mI (178336) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (180626) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (182916) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (185206) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (187496) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (189786) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:79%
+[0;32mI (192076) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:81%
+[0;32mI (194366) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:63%
+[0;32mI (196656) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (198946) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (201236) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (203526) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:98%
+[0;32mI (205816) detection_responder: Dog detected. Moving servo to 90 degrees.[0m
+[0;32mI (212816) detection_responder: Moving servo to 0 degrees.[0m
+Image Captured
+
+dog score:98%
+[0;32mI (215106) detection_responder: Dog detected. Moving servo to 90 degrees.[0m
+[0;32mI (222106) detection_responder: Moving servo to 0 degrees.[0m
+Image Captured
+
+dog score:48%
+[0;32mI (224396) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (226686) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (228976) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (231266) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (233556) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (235846) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (238136) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (240426) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (242716) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:70%
+[0;32mI (245006) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (247296) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (249586) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:70%
+[0;32mI (251876) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (254166) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (256456) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (258746) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (261036) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (263326) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (265616) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (267906) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (270196) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (272486) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (274776) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (277066) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (279356) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (281646) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (283936) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (286226) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:70%
+[0;32mI (288516) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (290806) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:66%
+[0;32mI (293096) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (295386) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (297676) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (299966) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (302256) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (304546) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (306836) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (309126) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (311416) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (313706) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (315996) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (318286) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:68%
+[0;32mI (320576) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:70%
+[0;32mI (322866) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (325156) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:65%
+[0;32mI (327446) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:43%
+[0;32mI (329736) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:81%
+[0;32mI (332026) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:35%
+[0;32mI (334316) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (336606) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:57%
+[0;32mI (338896) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:55%
+[0;32mI (341186) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:50%
+[0;32mI (343476) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:57%
+[0;32mI (345766) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:57%
+[0;32mI (348056) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (350346) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:57%
+[0;32mI (352636) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (354926) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (357216) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:55%
+[0;32mI (359506) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (361796) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:55%
+[0;32mI (364086) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:55%
+[0;32mI (366376) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (368666) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (370956) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (373246) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (375536) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (377826) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (380116) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (382406) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (384696) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:55%
+[0;32mI (386986) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:55%
+[0;32mI (389276) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (391566) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:55%
+[0;32mI (393856) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (396146) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (398436) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:55%
+[0;32mI (400726) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (403016) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (405306) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:55%
+[0;32mI (407596) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (409886) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (412176) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:59%
+[0;32mI (414466) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (416756) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (419046) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (421336) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (423626) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+
+dog score:54%
+[0;32mI (425916) detection_responder: No Dog detected. Keeping servo in current position.[0m
+Image Captured
+

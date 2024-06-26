@@ -1,0 +1,629 @@
+ets Jul 29 2019 12:21:4�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:7524
+load:0x40078000,len:16552
+load:0x40080400,len:4
+load:0x40080404,len:4312
+entry 0x4008065c
+[0;32mI (29) boot: ESP-IDF v5.3-dev-2747-g4f3cd0deb9-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jun 14 2024 22:34:05[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (45) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (49) boot.esp32: SPI Mode       : QIO[0m
+[0;32mI (54) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (59) boot: Enabling RNG early entropy source...[0m
+[0;32mI (64) boot: Partition Table:[0m
+[0;32mI (68) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (75) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=7e574h (517492) map[0m
+[0;32mI (243) esp_image: segment 1: paddr=0008e59c vaddr=3ffb0000 size=01a7ch (  6780) load[0m
+[0;32mI (245) esp_image: segment 2: paddr=00090020 vaddr=400d0020 size=2f894h (194708) map[0m
+[0;32mI (298) esp_image: segment 3: paddr=000bf8bc vaddr=3ffb1a7c size=018f0h (  6384) load[0m
+[0;32mI (300) esp_image: segment 4: paddr=000c11b4 vaddr=40080000 size=10cd0h ( 68816) load[0m
+[0;32mI (334) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (334) boot: Disabling RNG early entropy source...[0m
+[0;32mI (345) cpu_start: Multicore app[0m
+[0;32mI (345) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (346) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (347) esp_psram: Speed: 80MHz[0m
+[0;32mI (351) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;33mW (359) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (835) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (843) cpu_start: Pro cpu start user code[0m
+[0;32mI (843) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (843) app_init: Application information:[0m
+[0;32mI (846) app_init: Project name:     person_detection[0m
+[0;32mI (851) app_init: App version:      1[0m
+[0;32mI (856) app_init: Compile time:     Jun 14 2024 22:42:01[0m
+[0;32mI (862) app_init: ELF file SHA256:  8b52e7fab...[0m
+[0;32mI (867) app_init: ESP-IDF:          v5.3-dev-2747-g4f3cd0deb9-dirty[0m
+[0;32mI (874) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (879) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (884) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (888) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (896) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (902) heap_init: At 3FFB40E0 len 0002BF20 (175 KiB): DRAM[0m
+[0;32mI (908) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (914) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (921) heap_init: At 40090CD0 len 0000F330 (60 KiB): IRAM[0m
+[0;32mI (927) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (935) spi_flash: detected chip: generic[0m
+[0;32mI (939) spi_flash: flash io: qio[0m
+[0;33mW (943) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (954) main_task: Started on CPU0[0m
+[0;32mI (964) main_task: Calling app_main()[0m
+Didn't find op for builtin opcode 'FULLY_CONNECTED'
+Failed to get registration from op code FULLY_CONNECTED
+ 
+AllocateTensors() failed
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d822b  PS      : 0x00060630  A0      : 0x800d7df5  A1      : 0x3ffb7960  
+A2      : 0x00000000  A3      : 0x00000005  A4      : 0x3ffb3ab0  A5      : 0x3ffb3b78  
+A6      : 0x3ffb3c38  A7      : 0x3ffb3c40  A8      : 0x00000000  A9      : 0x3ffb78d0  
+A10     : 0x00000060  A11     : 0x00000060  A12     : 0x00000001  A13     : 0x3ffb39e0  
+A14     : 0x3ffb3b20  A15     : 0x3ffb3ab0  SAR     : 0x0000001d  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000010  LBEG    : 0x400870ad  LEND    : 0x400870bd  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d8228:0x3ffb7960 0x400d7df2:0x3ffb7980
+
+
+
+
+ELF file SHA256: 8b52e7fab
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:7524
+load:0x40078000,len:16552
+load:0x40080400,len:4
+load:0x40080404,len:4312
+entry 0x4008065c
+[0;32mI (29) boot: ESP-IDF v5.3-dev-2747-g4f3cd0deb9-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jun 14 2024 22:34:05[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (45) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (49) boot.esp32: SPI Mode       : QIO[0m
+[0;32mI (54) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (58) boot: Enabling RNG early entropy source...[0m
+[0;32mI (64) boot: Partition Table:[0m
+[0;32mI (67) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (75) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=7e574h (517492) map[0m
+[0;32mI (243) esp_image: segment 1: paddr=0008e59c vaddr=3ffb0000 size=01a7ch (  6780) load[0m
+[0;32mI (245) esp_image: segment 2: paddr=00090020 vaddr=400d0020 size=2f894h (194708) map[0m
+[0;32mI (298) esp_image: segment 3: paddr=000bf8bc vaddr=3ffb1a7c size=018f0h (  6384) load[0m
+[0;32mI (300) esp_image: segment 4: paddr=000c11b4 vaddr=40080000 size=10cd0h ( 68816) load[0m
+[0;32mI (334) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (334) boot: Disabling RNG early entropy source...[0m
+[0;32mI (345) cpu_start: Multicore app[0m
+[0;32mI (345) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (345) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (347) esp_psram: Speed: 80MHz[0m
+[0;32mI (351) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;33mW (359) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (835) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (842) cpu_start: Pro cpu start user code[0m
+[0;32mI (843) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (843) app_init: Application information:[0m
+[0;32mI (845) app_init: Project name:     person_detection[0m
+[0;32mI (851) app_init: App version:      1[0m
+[0;32mI (855) app_init: Compile time:     Jun 14 2024 22:42:01[0m
+[0;32mI (861) app_init: ELF file SHA256:  8b52e7fab...[0m
+[0;32mI (867) app_init: ESP-IDF:          v5.3-dev-2747-g4f3cd0deb9-dirty[0m
+[0;32mI (874) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (878) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (883) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (888) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (895) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (901) heap_init: At 3FFB40E0 len 0002BF20 (175 KiB): DRAM[0m
+[0;32mI (908) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (914) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (920) heap_init: At 40090CD0 len 0000F330 (60 KiB): IRAM[0m
+[0;32mI (927) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (935) spi_flash: detected chip: generic[0m
+[0;32mI (939) spi_flash: flash io: qio[0m
+[0;33mW (943) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (954) main_task: Started on CPU0[0m
+[0;32mI (964) main_task: Calling app_main()[0m
+Didn't find op for builtin opcode 'FULLY_CONNECTED'
+Failed to get registration from op code FULLY_CONNECTED
+ 
+AllocateTensors() failed
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d822b  PS      : 0x00060630  A0      : 0x800d7df5  A1      : 0x3ffb7960  
+A2      : 0x00000000  A3      : 0x00000005  A4      : 0x3ffb3ab0  A5      : 0x3ffb3b78  
+A6      : 0x3ffb3c38  A7      : 0x3ffb3c40  A8      : 0x00000000  A9      : 0x3ffb78d0  
+A10     : 0x00000060  A11     : 0x00000060  A12     : 0x00000001  A13     : 0x3ffb39e0  
+A14     : 0x3ffb3b20  A15     : 0x3ffb3ab0  SAR     : 0x0000001d  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000010  LBEG    : 0x400870ad  LEND    : 0x400870bd  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d8228:0x3ffb7960 0x400d7df2:0x3ffb7980
+
+
+
+
+ELF file SHA256: 8b52e7fab
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:7524
+load:0x40078000,len:16552
+load:0x40080400,len:4
+load:0x40080404,len:4312
+entry 0x4008065c
+[0;32mI (29) boot: ESP-IDF v5.3-dev-2747-g4f3cd0deb9-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jun 14 2024 22:34:05[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (45) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (49) boot.esp32: SPI Mode       : QIO[0m
+[0;32mI (54) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (58) boot: Enabling RNG early entropy source...[0m
+[0;32mI (64) boot: Partition Table:[0m
+[0;32mI (67) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (75) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=7e574h (517492) map[0m
+[0;32mI (243) esp_image: segment 1: paddr=0008e59c vaddr=3ffb0000 size=01a7ch (  6780) load[0m
+[0;32mI (245) esp_image: segment 2: paddr=00090020 vaddr=400d0020 size=2f894h (194708) map[0m
+[0;32mI (298) esp_image: segment 3: paddr=000bf8bc vaddr=3ffb1a7c size=018f0h (  6384) load[0m
+[0;32mI (300) esp_image: segment 4: paddr=000c11b4 vaddr=40080000 size=10cd0h ( 68816) load[0m
+[0;32mI (334) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (334) boot: Disabling RNG early entropy source...[0m
+[0;32mI (345) cpu_start: Multicore app[0m
+[0;32mI (345) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (345) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (347) esp_psram: Speed: 80MHz[0m
+[0;32mI (351) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;33mW (359) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (835) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (842) cpu_start: Pro cpu start user code[0m
+[0;32mI (843) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (843) app_init: Application information:[0m
+[0;32mI (845) app_init: Project name:     person_detection[0m
+[0;32mI (851) app_init: App version:      1[0m
+[0;32mI (855) app_init: Compile time:     Jun 14 2024 22:42:01[0m
+[0;32mI (861) app_init: ELF file SHA256:  8b52e7fab...[0m
+[0;32mI (867) app_init: ESP-IDF:          v5.3-dev-2747-g4f3cd0deb9-dirty[0m
+[0;32mI (874) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (878) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (883) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (888) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (895) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (901) heap_init: At 3FFB40E0 len 0002BF20 (175 KiB): DRAM[0m
+[0;32mI (908) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (914) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (921) heap_init: At 40090CD0 len 0000F330 (60 KiB): IRAM[0m
+[0;32mI (927) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (935) spi_flash: detected chip: generic[0m
+[0;32mI (939) spi_flash: flash io: qio[0m
+[0;33mW (943) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (954) main_task: Started on CPU0[0m
+[0;32mI (964) main_task: Calling app_main()[0m
+Didn't find op for builtin opcode 'FULLY_CONNECTED'
+Failed to get registration from op code FULLY_CONNECTED
+ 
+AllocateTensors() failed
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d822b  PS      : 0x00060630  A0      : 0x800d7df5  A1      : 0x3ffb7960  
+A2      : 0x00000000  A3      : 0x00000005  A4      : 0x3ffb3ab0  A5      : 0x3ffb3b78  
+A6      : 0x3ffb3c38  A7      : 0x3ffb3c40  A8      : 0x00000000  A9      : 0x3ffb78d0  
+A10     : 0x00000060  A11     : 0x00000060  A12     : 0x00000001  A13     : 0x3ffb39e0  
+A14     : 0x3ffb3b20  A15     : 0x3ffb3ab0  SAR     : 0x0000001d  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000010  LBEG    : 0x400870ad  LEND    : 0x400870bd  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d8228:0x3ffb7960 0x400d7df2:0x3ffb7980
+
+
+
+
+ELF file SHA256: 8b52e7fab
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:7524
+load:0x40078000,len:16552
+load:0x40080400,len:4
+load:0x40080404,len:4312
+entry 0x4008065c
+[0;32mI (29) boot: ESP-IDF v5.3-dev-2747-g4f3cd0deb9-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jun 14 2024 22:34:05[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (45) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (49) boot.esp32: SPI Mode       : QIO[0m
+[0;32mI (54) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (58) boot: Enabling RNG early entropy source...[0m
+[0;32mI (64) boot: Partition Table:[0m
+[0;32mI (67) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (75) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=7e574h (517492) map[0m
+[0;32mI (243) esp_image: segment 1: paddr=0008e59c vaddr=3ffb0000 size=01a7ch (  6780) load[0m
+[0;32mI (245) esp_image: segment 2: paddr=00090020 vaddr=400d0020 size=2f894h (194708) map[0m
+[0;32mI (298) esp_image: segment 3: paddr=000bf8bc vaddr=3ffb1a7c size=018f0h (  6384) load[0m
+[0;32mI (300) esp_image: segment 4: paddr=000c11b4 vaddr=40080000 size=10cd0h ( 68816) load[0m
+[0;32mI (334) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (334) boot: Disabling RNG early entropy source...[0m
+[0;32mI (345) cpu_start: Multicore app[0m
+[0;32mI (345) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (345) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (347) esp_psram: Speed: 80MHz[0m
+[0;32mI (351) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;33mW (359) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (835) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (842) cpu_start: Pro cpu start user code[0m
+[0;32mI (843) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (843) app_init: Application information:[0m
+[0;32mI (845) app_init: Project name:     person_detection[0m
+[0;32mI (851) app_init: App version:      1[0m
+[0;32mI (855) app_init: Compile time:     Jun 14 2024 22:42:01[0m
+[0;32mI (861) app_init: ELF file SHA256:  8b52e7fab...[0m
+[0;32mI (867) app_init: ESP-IDF:          v5.3-dev-2747-g4f3cd0deb9-dirty[0m
+[0;32mI (874) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (878) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (883) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (888) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (895) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (901) heap_init: At 3FFB40E0 len 0002BF20 (175 KiB): DRAM[0m
+[0;32mI (908) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (914) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (921) heap_init: At 40090CD0 len 0000F330 (60 KiB): IRAM[0m
+[0;32mI (927) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (935) spi_flash: detected chip: generic[0m
+[0;32mI (939) spi_flash: flash io: qio[0m
+[0;33mW (943) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (954) main_task: Started on CPU0[0m
+[0;32mI (964) main_task: Calling app_main()[0m
+Didn't find op for builtin opcode 'FULLY_CONNECTED'
+Failed to get registration from op code FULLY_CONNECTED
+ 
+AllocateTensors() failed
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d822b  PS      : 0x00060630  A0      : 0x800d7df5  A1      : 0x3ffb7960  
+A2      : 0x00000000  A3      : 0x00000005  A4      : 0x3ffb3ab0  A5      : 0x3ffb3b78  
+A6      : 0x3ffb3c38  A7      : 0x3ffb3c40  A8      : 0x00000000  A9      : 0x3ffb78d0  
+A10     : 0x00000060  A11     : 0x00000060  A12     : 0x00000001  A13     : 0x3ffb39e0  
+A14     : 0x3ffb3b20  A15     : 0x3ffb3ab0  SAR     : 0x0000001d  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000010  LBEG    : 0x400870ad  LEND    : 0x400870bd  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d8228:0x3ffb7960 0x400d7df2:0x3ffb7980
+
+
+
+
+ELF file SHA256: 8b52e7fab
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:7524
+load:0x40078000,len:16552
+load:0x40080400,len:4
+load:0x40080404,len:4312
+entry 0x4008065c
+[0;32mI (29) boot: ESP-IDF v5.3-dev-2747-g4f3cd0deb9-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jun 14 2024 22:34:05[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (45) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (49) boot.esp32: SPI Mode       : QIO[0m
+[0;32mI (54) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (58) boot: Enabling RNG early entropy source...[0m
+[0;32mI (64) boot: Partition Table:[0m
+[0;32mI (67) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (75) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=7e574h (517492) map[0m
+[0;32mI (243) esp_image: segment 1: paddr=0008e59c vaddr=3ffb0000 size=01a7ch (  6780) load[0m
+[0;32mI (245) esp_image: segment 2: paddr=00090020 vaddr=400d0020 size=2f894h (194708) map[0m
+[0;32mI (298) esp_image: segment 3: paddr=000bf8bc vaddr=3ffb1a7c size=018f0h (  6384) load[0m
+[0;32mI (300) esp_image: segment 4: paddr=000c11b4 vaddr=40080000 size=10cd0h ( 68816) load[0m
+[0;32mI (334) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (334) boot: Disabling RNG early entropy source...[0m
+[0;32mI (345) cpu_start: Multicore app[0m
+[0;32mI (345) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (345) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (347) esp_psram: Speed: 80MHz[0m
+[0;32mI (351) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;33mW (359) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (835) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (842) cpu_start: Pro cpu start user code[0m
+[0;32mI (843) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (843) app_init: Application information:[0m
+[0;32mI (845) app_init: Project name:     person_detection[0m
+[0;32mI (851) app_init: App version:      1[0m
+[0;32mI (855) app_init: Compile time:     Jun 14 2024 22:42:01[0m
+[0;32mI (861) app_init: ELF file SHA256:  8b52e7fab...[0m
+[0;32mI (867) app_init: ESP-IDF:          v5.3-dev-2747-g4f3cd0deb9-dirty[0m
+[0;32mI (874) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (878) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (883) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (888) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (895) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (901) heap_init: At 3FFB40E0 len 0002BF20 (175 KiB): DRAM[0m
+[0;32mI (908) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (914) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (921) heap_init: At 40090CD0 len 0000F330 (60 KiB): IRAM[0m
+[0;32mI (927) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (935) spi_flash: detected chip: generic[0m
+[0;32mI (939) spi_flash: flash io: qio[0m
+[0;33mW (943) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (954) main_task: Started on CPU0[0m
+[0;32mI (964) main_task: Calling app_main()[0m
+Didn't find op for builtin opcode 'FULLY_CONNECTED'
+Failed to get registration from op code FULLY_CONNECTED
+ 
+AllocateTensors() failed
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d822b  PS      : 0x00060630  A0      : 0x800d7df5  A1      : 0x3ffb7960  
+A2      : 0x00000000  A3      : 0x00000005  A4      : 0x3ffb3ab0  A5      : 0x3ffb3b78  
+A6      : 0x3ffb3c38  A7      : 0x3ffb3c40  A8      : 0x00000000  A9      : 0x3ffb78d0  
+A10     : 0x00000060  A11     : 0x00000060  A12     : 0x00000001  A13     : 0x3ffb39e0  
+A14     : 0x3ffb3b20  A15     : 0x3ffb3ab0  SAR     : 0x0000001d  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000010  LBEG    : 0x400870ad  LEND    : 0x400870bd  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d8228:0x3ffb7960 0x400d7df2:0x3ffb7980
+
+
+
+
+ELF file SHA256: 8b52e7fab
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:7524
+load:0x40078000,len:16552
+load:0x40080400,len:4
+load:0x40080404,len:4312
+entry 0x4008065c
+[0;32mI (29) boot: ESP-IDF v5.3-dev-2747-g4f3cd0deb9-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jun 14 2024 22:34:05[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (45) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (49) boot.esp32: SPI Mode       : QIO[0m
+[0;32mI (54) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (58) boot: Enabling RNG early entropy source...[0m
+[0;32mI (64) boot: Partition Table:[0m
+[0;32mI (67) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (75) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=7e574h (517492) map[0m
+[0;32mI (243) esp_image: segment 1: paddr=0008e59c vaddr=3ffb0000 size=01a7ch (  6780) load[0m
+[0;32mI (245) esp_image: segment 2: paddr=00090020 vaddr=400d0020 size=2f894h (194708) map[0m
+[0;32mI (298) esp_image: segment 3: paddr=000bf8bc vaddr=3ffb1a7c size=018f0h (  6384) load[0m
+[0;32mI (300) esp_image: segment 4: paddr=000c11b4 vaddr=40080000 size=10cd0h ( 68816) load[0m
+[0;32mI (334) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (334) boot: Disabling RNG early entropy source...[0m
+[0;32mI (345) cpu_start: Multicore app[0m
+[0;32mI (345) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (345) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (347) esp_psram: Speed: 80MHz[0m
+[0;32mI (351) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;33mW (359) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (835) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (842) cpu_start: Pro cpu start user code[0m
+[0;32mI (843) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (843) app_init: Application information:[0m
+[0;32mI (845) app_init: Project name:     person_detection[0m
+[0;32mI (851) app_init: App version:      1[0m
+[0;32mI (855) app_init: Compile time:     Jun 14 2024 22:42:01[0m
+[0;32mI (861) app_init: ELF file SHA256:  8b52e7fab...[0m
+[0;32mI (867) app_init: ESP-IDF:          v5.3-dev-2747-g4f3cd0deb9-dirty[0m
+[0;32mI (874) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (878) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (883) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (888) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (895) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (901) heap_init: At 3FFB40E0 len 0002BF20 (175 KiB): DRAM[0m
+[0;32mI (908) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (914) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (921) heap_init: At 40090CD0 len 0000F330 (60 KiB): IRAM[0m
+[0;32mI (927) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (935) spi_flash: detected chip: generic[0m
+[0;32mI (939) spi_flash: flash io: qio[0m
+[0;33mW (943) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (954) main_task: Started on CPU0[0m
+[0;32mI (964) main_task: Calling app_main()[0m
+Didn't find op for builtin opcode 'FULLY_CONNECTED'
+Failed to get registration from op code FULLY_CONNECTED
+ 
+AllocateTensors() failed
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d822b  PS      : 0x00060630  A0      : 0x800d7df5  A1      : 0x3ffb7960  
+A2      : 0x00000000  A3      : 0x00000005  A4      : 0x3ffb3ab0  A5      : 0x3ffb3b78  
+A6      : 0x3ffb3c38  A7      : 0x3ffb3c40  A8      : 0x00000000  A9      : 0x3ffb78d0  
+A10     : 0x00000060  A11     : 0x00000060  A12     : 0x00000001  A13     : 0x3ffb39e0  
+A14     : 0x3ffb3b20  A15     : 0x3ffb3ab0  SAR     : 0x0000001d  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000010  LBEG    : 0x400870ad  LEND    : 0x400870bd  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d8228:0x3ffb7960 0x400d7df2:0x3ffb7980
+
+
+
+
+ELF file SHA256: 8b52e7fab
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:7524
+load:0x40078000,len:16552
+load:0x40080400,len:4
+load:0x40080404,len:4312
+entry 0x4008065c
+[0;32mI (29) boot: ESP-IDF v5.3-dev-2747-g4f3cd0deb9-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jun 14 2024 22:34:05[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (45) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (49) boot.esp32: SPI Mode       : QIO[0m
+[0;32mI (54) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (58) boot: Enabling RNG early entropy source...[0m
+[0;32mI (64) boot: Partition Table:[0m
+[0;32mI (67) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (75) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=7e574h (517492) map[0m
+[0;32mI (243) esp_image: segment 1: paddr=0008e59c vaddr=3ffb0000 size=01a7ch (  6780) load[0m
+[0;32mI (245) esp_image: segment 2: paddr=00090020 vaddr=400d0020 size=2f894h (194708) map[0m
+[0;32mI (298) esp_image: segment 3: paddr=000bf8bc vaddr=3ffb1a7c size=018f0h (  6384) load[0m
+[0;32mI (300) esp_image: segment 4: paddr=000c11b4 vaddr=40080000 size=10cd0h ( 68816) load[0m
+[0;32mI (334) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (334) boot: Disabling RNG early entropy source...[0m
+[0;32mI (345) cpu_start: Multicore app[0m
+[0;32mI (345) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (345) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (347) esp_psram: Speed: 80MHz[0m
+[0;32mI (351) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;33mW (359) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (835) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (842) cpu_start: Pro cpu start user code[0m
+[0;32mI (843) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (843) app_init: Application information:[0m
+[0;32mI (845) app_init: Project name:     person_detection[0m
+[0;32mI (851) app_init: App version:      1[0m
+[0;32mI (855) app_init: Compile time:     Jun 14 2024 22:42:01[0m
+[0;32mI (861) app_init: ELF file SHA256:  8b52e7fab...[0m
+[0;32mI (867) app_init: ESP-IDF:          v5.3-dev-2747-g4f3cd0deb9-dirty[0m
+[0;32mI (874) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (878) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (883) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (888) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (895) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (901) heap_init: At 3FFB40E0 len 0002BF20 (175 KiB): DRAM[0m
+[0;32mI (908) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (914) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (921) heap_init: At 40090CD0 len 0000F330 (60 KiB): IRAM[0m
+[0;32mI (927) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (935) spi_flash: detected chip: generic[0m
+[0;32mI (939) spi_flash: flash io: qio[0m
+[0;33mW (943) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (954) main_task: Started on CPU0[0m
+[0;32mI (964) main_task: Calling app_main()[0m
+Didn't find op for builtin opcode 'FULLY_CONNECTED'
+Failed to get registration from op code FULLY_CONNECTED
+ 
+AllocateTensors() failed
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d822b  PS      : 0x00060630  A0      : 0x800d7df5  A1      : 0x3ffb7960  
+A2      : 0x00000000  A3      : 0x00000005  A4      : 0x3ffb3ab0  A5      : 0x3ffb3b78  
+A6      : 0x3ffb3c38  A7      : 0x3ffb3c40  A8      : 0x00000000  A9      : 0x3ffb78d0  
+A10     : 0x00000060  A11     : 0x00000060  A12     : 0x00000001  A13     : 0x3ffb39e0  
+A14     : 0x3ffb3b20  A15     : 0x3ffb3ab0  SAR     : 0x0000001d  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000010  LBEG    : 0x400870ad  LEND    : 0x400870bd  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d8228:0x3ffb7960 0x400d7df2:0x3ffb7980
+
+
+
+
+ELF file SHA256: 8b52e7fab
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:7524
+load:0x40078000,len:16552
+load:0x40080400,len:4
+load:0x40080404,len:4312
+entry 0x4008065c
+[0;32mI (29) boot: ESP-IDF v5.3-dev-2747-g4f3cd0deb9-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jun 14 2024 22:34:05[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (45) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (49) boot.esp32: SPI Mode       : QIO[0m
+[0;32mI (54) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (58) boot: Enabling RNG early entropy source...[0m
+[0;32mI (64) boot: Partition Table:[0m
+[0;32mI (67) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (75) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=7e574h (517492) map[0m

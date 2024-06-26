@@ -1,0 +1,20 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d8427: setup_mcpwm() at /home/isaias/esp-tflite-micro/dog detection/main/detection_responder.cc:41 (discriminator 1)
+[0m
+[0;33m0x40089537: _esp_error_check_failed at /home/isaias/esp/idf/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m0x40081e7d: panic_abort at /home/isaias/esp/idf/esp-idf/components/esp_system/panic.c:463
+0x40089541: esp_system_abort at /home/isaias/esp/idf/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x4008f585: abort at /home/isaias/esp/idf/esp-idf/components/newlib/abort.c:38
+0x40089537: _esp_error_check_failed at /home/isaias/esp/idf/esp-idf/components/esp_system/esp_err.c:50
+0x400d8427: setup_mcpwm() at /home/isaias/esp-tflite-micro/dog detection/main/detection_responder.cc:41 (discriminator 1)
+0x400d85d0: RespondToDetection(float) at /home/isaias/esp-tflite-micro/dog detection/main/detection_responder.cc:86
+0x400d83d5: loop at /home/isaias/esp-tflite-micro/dog detection/main/main_functions.cc:116
+0x400d7f82: tf_main() at /home/isaias/esp-tflite-micro/dog detection/main/main.cc:35 (discriminator 1)
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m
